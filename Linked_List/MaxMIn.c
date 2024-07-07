@@ -1,5 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+struct list
+{
+    int data;
+    struct list *next;
+};
+typedef struct list node;
+
+
+
 int main()
 {
     node *start = NULL;
