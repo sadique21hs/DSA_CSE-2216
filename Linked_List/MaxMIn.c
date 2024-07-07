@@ -59,7 +59,19 @@ int findMin(node *start)
     return minVal;
 }
 
+int findSum(node *start)
+{
+    int sum = 0;
+    node *temp = start;
 
+    while (temp != NULL)
+    {
+        sum += temp->data;
+        temp = temp->next;
+    }
+
+    return sum;
+}
 
 int main()
 {
