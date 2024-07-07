@@ -19,6 +19,15 @@ void display(node *start)
     printf("\n");
 }
 
+void reverseDisplay(node *start)
+{
+    if (start == NULL)
+        return;
+
+    reverseDisplay(start->next);
+    printf("%d ", start->data);
+}
+
 
 int main()
 {
