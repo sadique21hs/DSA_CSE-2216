@@ -19,7 +19,7 @@ int main()
     a->data=10;
     b->data=20;
     c->data=30;
-    d=a;
+    d=a->data;
 //d->data=50;
 
     printf("%d %d %d",a->data,b->data,d);
