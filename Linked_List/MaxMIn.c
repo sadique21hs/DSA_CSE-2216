@@ -29,6 +29,38 @@ void reverseDisplay(node *start)
 }
 
 
+int findMax(node *start)
+{
+    int maxVal = start->data;
+    node *temp = start->next;
+
+    while (temp != NULL)
+    {
+        if (temp->data > maxVal)
+            maxVal = temp->data;
+        temp = temp->next;
+    }
+
+    return maxVal;
+}
+
+int findMin(node *start)
+{
+    int minVal = start->data;
+    node *temp = start->next;
+
+    while (temp != NULL)
+    {
+        if (temp->data < minVal)
+            minVal = temp->data;
+        temp = temp->next;
+    }
+
+    return minVal;
+}
+
+
+
 int main()
 {
     node *start = NULL;
