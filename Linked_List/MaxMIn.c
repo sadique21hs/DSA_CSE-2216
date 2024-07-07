@@ -8,6 +8,17 @@ struct list
 typedef struct list node;
 
 
+void display(node *start)
+{
+    node *temp = start;
+    while (temp != NULL)
+    {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
 
 int main()
 {
