@@ -15,6 +15,17 @@ void menu()
     printf("\n1.Insert: \n2.Exit : \n");
 }
 
+void display()
+{
+    node *temp=start;
+    while(temp!=NULL)
+    {
+
+        printf("%d ",temp->data);
+        temp=temp->next;
+    }
+
+}
 
 void inseretion(int item)
 {
