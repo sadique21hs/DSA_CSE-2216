@@ -16,6 +16,35 @@ void menu()
 }
 
 
+void inseretion(int item)
+{
+    node *temp;
+    node *temp1;
+    if (start==NULL)
+    {
+        start=new node();
+        start->data=item;
+        start->next=NULL;
+    }
+    else
+    {
+        temp=start;
+        while(temp->next!=NULL && temp->next->data<=item)
+        {
+            temp=temp->next;
+        }
+
+        temp1=new node();
+        temp1->data=item;
+        temp1->next=temp->next;
+        temp->next=temp1;
+
+
+    }
+
+}
+
+
 
 int main()
 {
