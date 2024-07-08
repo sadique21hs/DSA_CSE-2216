@@ -26,6 +26,14 @@ void inseretion(int item)
         start->data=item;
         start->next=NULL;
     }
+    else if(item<=start->data)
+    {
+        temp=new node();
+        temp->data=item;
+        temp->next=start;
+        start=temp;
+
+    }
     else
     {
         temp=start;
