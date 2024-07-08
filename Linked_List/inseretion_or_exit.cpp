@@ -12,7 +12,7 @@ void menu()
 {
     int data;
     list *next;
-    printf("\n1.Insert: \n2.Exit : \n")
+    printf("\n1.Insert: \n2.Exit : \n");
 }
 
 
