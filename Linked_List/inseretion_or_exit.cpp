@@ -8,6 +8,13 @@ typedef struct list node;
 node *start;
 
 
+void menu()
+{
+    int data;
+    list *next;
+    printf("\n1.Insert: \n2.Exit : \n")
+}
+
 
 
 int main()
