@@ -1,5 +1,5 @@
 #include<stdio.h>
-void BinarySearch(int arr[], int n,int search)
+int BinarySearch(int arr[], int n,int search)
 {
     int l=0, r=n-1,mid;
     while(l<r)
@@ -82,4 +82,7 @@ int main()
     }
 
 }
+
+
+
 
