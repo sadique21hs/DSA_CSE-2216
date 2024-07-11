@@ -66,7 +66,8 @@ int main()
         printf("Enter the element: ");
         scanf("%d",&arr[i]);
     }
-    }
-printf("\nEnter the element for search: ");
+    BubbleSort(arr,n);
+    printf("\nEnter the element for search: ");
     scanf("%d",&search);
-
+    BinarySearch(arr, n, search);
+}
