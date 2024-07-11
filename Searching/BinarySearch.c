@@ -1,5 +1,5 @@
-
-int BinarySearch(int arr[], int n,int search)
+#include<stdio.h>
+void BinarySearch(int arr[], int n,int search)
 {
     int l=0, r=n-1,mid;
     while(l<r)
@@ -23,18 +23,10 @@ int BinarySearch(int arr[], int n,int search)
 
 }
 
-
-int main()
-
+void BubbleSort(int arr[],int n)
 {
-    int arr[100],n,i,search,result ;
-    printf("Enter the array size: ");
-    scanf("%d",&n);
-    for(i=0; i<n; i++)
-    {
-        printf("Enter the element: ");
-        scanf("%d",&arr[i]);
-    }for (i=0; i<n-1; i++)
+    int i,j,temp;
+    for (i=0; i<n-1; i++)
     {
         int  flag=1; //for better
         for( j=0; j<n-1; j++)
@@ -59,6 +51,21 @@ int main()
     for( i=0; i<n; i++)
     {
         printf("%d ",arr[i]);
+    }
+}
+
+
+int main()
+
+{
+    int arr[100],n,i,search,result ;
+    printf("Enter the array size: ");
+    scanf("%d",&n);
+    for(i=0; i<n; i++)
+    {
+        printf("Enter the element: ");
+        scanf("%d",&arr[i]);
+    }
     }
 printf("\nEnter the element for search: ");
     scanf("%d",&search);
