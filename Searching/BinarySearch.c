@@ -56,7 +56,6 @@ void BubbleSort(int arr[],int n)
 
 
 int main()
-
 {
     int arr[100],n,i,search,result ;
     printf("Enter the array size: ");
@@ -69,5 +68,18 @@ int main()
     BubbleSort(arr,n);
     printf("\nEnter the element for search: ");
     scanf("%d",&search);
-    BinarySearch(arr, n, search);
+
+    result= BinarySearch(arr, n, search);
+
+
+    if (result != -1)
+    {
+        printf("Element found at index %d\n", result);
+    }
+    else
+    {
+        printf("Element not found\n");
+    }
+
 }
+
