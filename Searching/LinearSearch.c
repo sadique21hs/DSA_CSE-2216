@@ -16,6 +16,18 @@ int main()
         printf("%d ",arr[i]);
 
     }
+    printf("\nEnter the element for search: ");
+    scanf("%d",&search);
 
+    for(i=0; i<n; i++)
+    {
+        if(arr[i]==search)
+        {
+            printf("\nThe data is on the index no: %d",i);
+            flag=1;
+            break;
+        }
+
+    }
   
 }
