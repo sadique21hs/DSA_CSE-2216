@@ -33,3 +33,24 @@ int main()
     {
         printf("%d ",arr[i]);
     }
+printf("\nEnter the element for search: ");
+    scanf("%d",&search);
+int l=0, r=n-1,mid;
+    while(l<r)
+    {
+        mid=l+(r-1)/2;
+        if(arr[mid]==search)
+        {
+            return mid;
+
+        }
+        else if(arr[mid]<search)
+        {
+            l=mid+1;
+        }
+        else
+        {
+            r=mid-1;
+        }
+    }
+printf("The index is %d: ",mid);
