@@ -18,7 +18,7 @@ int main()
     }
     printf("\nEnter the element for search: ");
     scanf("%d",&search);
-
+    int flag=0;
     for(i=0; i<n; i++)
     {
         if(arr[i]==search)
