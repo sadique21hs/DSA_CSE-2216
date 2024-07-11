@@ -1,4 +1,31 @@
+
+int BinarySearch(int arr[], int n,int search)
+{
+    int l=0, r=n-1,mid;
+    while(l<r)
+    {
+        mid=l+(r-1)/2;
+        if(arr[mid]==search)
+        {
+            return mid;
+
+        }
+        else if(arr[mid]<search)
+        {
+            l=mid+1;
+        }
+        else
+        {
+            r=mid-1;
+        }
+    }
+    return -1;
+
+}
+
+
 int main()
+
 {
     int arr[100],n,i,search,result ;
     printf("Enter the array size: ");
@@ -35,22 +62,4 @@ int main()
     }
 printf("\nEnter the element for search: ");
     scanf("%d",&search);
-int l=0, r=n-1,mid;
-    while(l<r)
-    {
-        mid=l+(r-1)/2;
-        if(arr[mid]==search)
-        {
-            return mid;
 
-        }
-        else if(arr[mid]<search)
-        {
-            l=mid+1;
-        }
-        else
-        {
-            r=mid-1;
-        }
-    }
-printf("The index is %d: ",mid);
