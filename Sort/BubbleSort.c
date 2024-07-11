@@ -20,7 +20,7 @@ int main()
     }
     for (i=0; i<n-1; i++)
     {
-     
+     int flag=1; //for less time consuming
         for( j=0; j<n-1; j++)
         {
             if (arr[j]>arr[j+1])
@@ -31,6 +31,10 @@ int main()
             }
 
         }
+        if(flag==0){
+            break;
+        }
+        
 
     }
     printf("\nAfter sort:\n");
