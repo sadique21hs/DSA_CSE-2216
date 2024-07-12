@@ -20,7 +20,10 @@ void display()
     }
     printf("\n");
 }
-
+void menu()
+{
+    printf("\n1. Insert\n2. Delete\n3. Exit\n");
+}
 int main()
 {
     int choice, item;
