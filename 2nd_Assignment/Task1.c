@@ -1,4 +1,4 @@
-
+/*L R T B which is max and enter the sum*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
