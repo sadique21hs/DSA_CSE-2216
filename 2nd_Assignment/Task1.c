@@ -115,7 +115,7 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        printf("Enter the Value of command and x:  ");
+        printf("Enter the Value of command (L/R/U/D) and value of x:  ");
         scanf("%s %d", command, &x);
 
         if (strcmp(command, "L") == 0)
