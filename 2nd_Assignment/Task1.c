@@ -22,6 +22,13 @@ typedef struct List Node;
     return newNode;
 }
 
+void insertLeft(Node* head, int data)
+{
+    Node* newNode;
+    newNode = createNode(data);
+    newNode->left = head->left;
+    head->left = newNode;
+}
 
 
 
@@ -39,7 +46,7 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        printf("Enter the Value of command and x:  ");
+        printf("Enter the Value of command(L/R/U/D) and x:  ");
         scanf("%s %d", command, &x);
 
         if (strcmp(command, "L") == 0)
