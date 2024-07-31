@@ -22,6 +22,7 @@ typedef struct List Node;
     return newNode;
 }
 
+
 void insertLeft(Node* head, int data)
 {
     Node* newNode;
@@ -30,8 +31,76 @@ void insertLeft(Node* head, int data)
     head->left = newNode;
 }
 
+void insertRight(Node* head, int data)
+{
+    Node* newNode;
+    newNode = createNode(data);
+    newNode->right = head->right;
+    head->right = newNode;
+}
 
 
+void insertTop(Node* head, int data)
+{
+    Node* newNode;
+    newNode = createNode(data);
+    newNode->top = head->top;
+    head->top = newNode;
+}
+
+void insertBottom(Node* head, int data)
+{
+    Node* newNode;
+    newNode = createNode(data);
+    newNode->bottom = head->bottom;
+    head->bottom = newNode;
+}
+
+
+int calculateSum(Node* head, char direction)
+{
+    int sum = 0;
+    Node* current;
+
+    if (direction == 'L')
+    {
+        current = head->left;
+        while (current != NULL)
+        {
+            sum= sum+ current->data;
+            current = current->left;
+        }
+    }
+    else if (direction == 'R')
+    {
+        current = head->right;
+        while (current != NULL)
+        {
+            sum =sum+ current->data;
+            current = current->right;
+        }
+    }
+    else if (direction == 'T')
+    {
+        current = head->top;
+        while (current != NULL)
+        {
+            sum =sum+ current->data;
+            current = current->top;
+        }
+    }
+    else if (direction == 'B')
+    {
+        current = head->bottom;
+        while (current != NULL)
+        {
+            sum=sum+ current->data;
+            current = current->bottom;
+        }
+    }
+
+    return sum;
+}
 
 int main()
 {
@@ -46,7 +115,7 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        printf("Enter the Value of command(L/R/U/D) and x:  ");
+        printf("Enter the Value of command and x:  ");
         scanf("%s %d", command, &x);
 
         if (strcmp(command, "L") == 0)
