@@ -21,3 +21,78 @@ typedef struct List Node;
     newNode->left = newNode->right = newNode->top = newNode->bottom = NULL;
     return newNode;
 }
+
+
+
+
+
+int main()
+{
+    int n, i, x;
+    char command[3];
+
+
+    Node* head = createNode(0);
+
+    printf("Enter the Value of n: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter the Value of command and x:  ");
+        scanf("%s %d", command, &x);
+
+        if (strcmp(command, "L") == 0)
+        {
+            insertLeft(head, x);
+        }
+        else if (strcmp(command, "R") == 0)
+        {
+            insertRight(head, x);
+        }
+        else if (strcmp(command, "T") == 0)
+        {
+            insertTop(head, x);
+        }
+        else if (strcmp(command, "B") == 0)
+        {
+            insertBottom(head, x);
+        }
+    }
+
+
+    int leftSum = calculateSum(head, 'L');
+
+    int rightSum = calculateSum(head, 'R');
+
+    int topSum = calculateSum(head, 'T');
+
+    int bottomSum = calculateSum(head, 'B');
+
+
+    int maxSum = leftSum;
+    char* maxList = "Left Link List";
+
+    if (rightSum > maxSum)
+    {
+        maxSum = rightSum;
+        maxList = "Right Link List";
+    }
+    if (topSum > maxSum)
+    {
+        maxSum = topSum;
+        maxList = "Top Link List";
+    }
+    if (bottomSum > maxSum)
+    {
+        maxSum = bottomSum;
+        maxList = "Bottom Link List";
+    }
+
+
+    printf("%s Has Maximum Sum %d\n", maxList, maxSum);
+
+
+
+    return 0;
+}
