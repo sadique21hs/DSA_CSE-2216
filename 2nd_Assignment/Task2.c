@@ -134,7 +134,29 @@ int main()
             printf("Current list: ");
             display();
             break;
-      
+        case 3:
+            printf("Enter item to search: ");
+            scanf("%d", &item);
+            if (search(item))
+            {
+                printf("Item %d found in the list.\n", item);
+            }
+            else
+            {
+                printf("Item %d not found in the list.\n", item);
+            }
+            break;
+        case 4:
+            printf("Enter item to delete: ");
+            scanf("%d", &item);
+            deletion(item);
+            display();
+            break;
+        case 5:
+            printf("Current length of the list: %d\n", length());
+            break;
+        case 6:
+            return 0;
         default:
             printf("Invalid choice. Please try again.\n");
         }
@@ -142,4 +164,3 @@ int main()
 
     return 0;
 }
-
