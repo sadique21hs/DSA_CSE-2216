@@ -26,7 +26,6 @@ void pop() {
     current_size--;
 }
 
-
 void enqueue(int x) {
     if (current_size >= MEMORY_SIZE) {
         printf("Discard Enqueue %d - Memory Full\n", x);
@@ -37,6 +36,7 @@ void enqueue(int x) {
     memory[queue_rear] = x;
     current_size++;
 }
+
 
 void dequeue() {
     if (queue_front == -1) {
@@ -62,6 +62,7 @@ void display_memory() {
                 printf("%d ", memory[i]);
             }
             printf("%d ", memory[queue_rear]); 
+        }
         for (int i = 0; i <= stack_top; i++) {
             printf("%d ", memory[i]);
         }
@@ -73,7 +74,7 @@ int main() {
     int n, x;
     char operation[3];
 
-   
+    
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
