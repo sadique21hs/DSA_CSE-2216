@@ -26,7 +26,7 @@ void pop() {
     current_size--;
 }
 
-// Enqueue operation
+
 void enqueue(int x) {
     if (current_size >= MEMORY_SIZE) {
         printf("Discard Enqueue %d - Memory Full\n", x);
@@ -38,13 +38,12 @@ void enqueue(int x) {
     current_size++;
 }
 
-// Dequeue operation
 void dequeue() {
     if (queue_front == -1) {
         printf("Discard Dequeue - Memory Empty\n");
         return;
     }
-    if (queue_front == queue_rear) { // Only one element left
+    if (queue_front == queue_rear) { 
         queue_front = queue_rear = -1;
     } else {
         queue_front = (queue_front + 1) % MEMORY_SIZE;
@@ -52,7 +51,7 @@ void dequeue() {
     current_size--;
 }
 
-// Display final memory status
+
 void display_memory() {
     if (current_size == 0) {
         printf("Memory is Empty\n");
@@ -62,8 +61,7 @@ void display_memory() {
             for (int i = queue_front; i != queue_rear; i = (i + 1) % MEMORY_SIZE) {
                 printf("%d ", memory[i]);
             }
-            printf("%d ", memory[queue_rear]); // Print last element
-        }
+            printf("%d ", memory[queue_rear]); 
         for (int i = 0; i <= stack_top; i++) {
             printf("%d ", memory[i]);
         }
@@ -75,7 +73,7 @@ int main() {
     int n, x;
     char operation[3];
 
-    // Input number of operations
+   
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
